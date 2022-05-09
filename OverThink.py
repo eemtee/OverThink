@@ -230,7 +230,8 @@ def respond(voice_data):
 
     # Current city or region
     if there_exists(["where am i"]):
-        Ip_info = requests.get('https://api.ipdata.co?api-key=81fddee4ee6c254a7b7682ed128dd05172cc98bca28fe04529775b89').json()
+    #change the "api-key=test" to your api key
+        Ip_info = requests.get('https://api.ipdata.co?api-key=test').json()
         loc = Ip_info['region']
         engine_speak(f"You must be somewhere in {loc}")    
    
